@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Section background */
+    #react {
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      padding: 60px 20px;
+      border-radius: 16px;
+    }
+
+    /* Heading */
+    #react .section-title {
+      text-align: center;
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      color: #61dafb; /* React blue */
+      position: relative;
+    }
+
+    #react .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #61dafb, #007acc);
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Card Styling */
+    #react .card {
+      min-height: 270px;
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #dfdfea;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    #react .card:hover {
+      transform: translateY(-10px) scale(1.04);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    }
+
+    /* Image Styling */
+    #react .card-img-top {
+      height: 200px;
+      object-fit: contain;
+      padding: 15px;
+      background: linear-gradient(135deg, #fafafa, #f3f3f3);
+      transition: transform 0.4s ease;
+    }
+
+    #react .card:hover .card-img-top {
+      transform: scale(1.1);
+    }
+
+    /* Title Styling */
+    #react .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #007acc;
+      margin-top: 10px;
+      transition: color 0.3s ease;
+    }
+
+    #react .card:hover .card-title {
+      color: #61dafb;
+    }
+
+    /* Lightbox overlay */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+
+    .lightbox.show {
+      display: flex;
+    }
+
+    /* Zoomed image */
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 14px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+      animation: zoomIn 0.4s ease;
+    }
+
+    /* Close button */
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 45px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+
+    .lightbox .close:hover {
+      transform: scale(1.2);
+      color: #61dafb;
+    }
+
+    /* Animation */
+    @keyframes zoomIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- React Section -->
+  <section id="react" class="container my-4">
+    <h2 class="section-title">React</h2>
+    <div id="react-gallery" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+      <!-- Example React cards -->
+<<<<<<< HEAD
+ <div class="col">
+=======
+       <div class="col">
+>>>>>>> 22b9f8df20e25a0885850ba1c21d7ccb2fd028bf
+      <div class="card h-100 text-center">
+          <img src="images/r1chchatmessage.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Chat App (Web Socket)</h6>
+        </div>
+      </div>
+    </div>
+
+     <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1chfitness.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Fitness & Step Counter</h6>
+        </div>
+      </div>
+    </div>
+
+     <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1chmusicplayer.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Online Music Player</h6>
+        </div>
+      </div>
+    </div>
+
+     <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1chonlinetest.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Online Exam/Test App</h6>
+        </div>
+      </div>
+    </div>
+
+     <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1customhook.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Custom Hook</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1customhook2.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Custom Hook (useFetch)</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1customwork3todo.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">To-Do & Task Manager</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1reduxsaga.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Amazon Shipment Tracking(Redux Saga)</h6>
+        </div>
+      </div>
+    </div>
+
+      <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1reduxthunk.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Users List(Redux Thunk)</h6>
+        </div>
+      </div>
+    </div>
+
+      <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1reduxwork.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Add To Cart-myG store</h6>
+        </div>
+      </div>
+    </div>
+
+  <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1rsstock.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Stock Price Tracker</h6>
+        </div>
+      </div>
+    </div>
+
+     <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1rstodo.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Todo App(Redux-Saga)</h6>
+        </div>
+      </div>
+    </div>
+
+ <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1rsweatherapp.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Weather App(Redux-Saga)</h6>
+        </div>
+      </div>
+    </div>
+
+ <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1rtwork1socialmediaapp.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Social Media App(Redux-thunk)</h6>
+        </div>
+      </div>
+    </div>
+
+ <div class="col">
+      <div class="card h-100 text-center">
+          <img src="images/r1saga.JPG" class="card-img-top" alt="React Example 1">
+        <div class="card-body">
+          <h6 class="card-title">Redux Saga</h6>
+        </div>
+      </div>
+    </div>
+
+<<<<<<< HEAD
+
+
+<!-- Above Blog-->
+=======
+>>>>>>> 22b9f8df20e25a0885850ba1c21d7ccb2fd028bf
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r1.JPG" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">Blog</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r2.JPG" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">CalculaterApp</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r3.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">CombinedForm</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r4.JPG" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">CommentBox</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r5.JPG" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">Comparison</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r6.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">Components</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r7.JPG" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">Composition</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r8.JPG" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">ContactUS</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r9.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">ContextApi</h6>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r10.JPG" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">ContextState</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r11.JPG" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">Dark Mode</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r13.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">EcommerceCheckout</h6>
+          </div>
+        </div>
+
+        <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r14.JPG" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">EcommerceProduct</h6>
+          </div>
+        </div>
+      </div>
+
+      </div><div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r155.JPG" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">FeedBack</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r16.JPG" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">FeedBackFormWithCharacterCounter</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r17.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">FeedBackSummary</h6>
+          </div>
+        </div>
+      </div><div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r18.JPG" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">First</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/20.jpeg" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">Formik</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r22.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">Handling</h6>
+          </div>
+        </div>
+      </div><div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/23.jpeg" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">Job Application</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r24.JPG" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">Mini Project 1</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/25.jpeg" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">Mini Project 2</h6>
+          </div>
+        </div>
+      </div>
+
+ <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r26.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">News Letter</h6>
+          </div>
+        </div>
+      </div><div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r28.JPG" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">ReactHookForm</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/29.jpeg" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">Real Clock</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/30.jpeg" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">Redux</h6>
+          </div>
+        </div>
+      </div>
+
+ <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/31.jpeg" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">Redux 2</h6>
+          </div>
+        </div>
+      </div><div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r32.JPG" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">Route</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r33.JPG" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">Simple Login</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r34.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">Star Rating</h6>
+          </div>
+        </div>
+      </div>
+
+ <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r35.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">State</h6>
+          </div>
+        </div>
+      </div><div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r36.JPG" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">State 2</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r37.JPG" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">State 3</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/38.jpeg" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">Persist</h6>
+          </div>
+        </div>
+      </div>
+
+ <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/39.jpeg" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">Synthetic Event</h6>
+          </div>
+        </div>
+      </div><div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/40.jpeg" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">Prevent Default Synthetic event</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r41.JPG" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">Timer</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r42.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">Timer 2</h6>
+          </div>
+        </div>
+      </div>
+
+ <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r43.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">Todo</h6>
+          </div>
+        </div>
+      </div><div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r44.JPG" class="card-img-top" alt="React Example 1">
+          <div class="card-body">
+            <h6 class="card-title">Use Effect</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r45.JPG" class="card-img-top" alt="React Example 2">
+          <div class="card-body">
+            <h6 class="card-title">User registration</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/r46.JPG" class="card-img-top" alt="React Example 3">
+          <div class="card-body">
+            <h6 class="card-title">validation</h6>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <img id="lightbox-img" src="" alt="Expanded view">
+  </div>
+
+  <script>
+    const reactCards = document.querySelectorAll('#react-gallery .card img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('closeBtn');
+
+    reactCards.forEach(card => {
+      card.addEventListener('click', () => {
+        lightbox.classList.add('show');
+        lightboxImg.src = card.src;
+        lightboxImg.alt = card.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.classList.remove('show');
+      }
+    });
+  </script>
+
+</body>
+</html>

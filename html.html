@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Section background */
+    #html {
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      padding: 60px 20px;
+      border-radius: 16px;
+     
+    }
+
+    /* Heading */
+    #html .section-title {
+      text-align: center;
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+       color: #ff6600;
+      position: relative;
+    }
+
+    #html .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #ff6600, #ff3366);
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Card Styling */
+    #html .card {
+      min-height: 270px;              /* bigger box */
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #dfdfea;           /* soft standard background */
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    #html .card:hover {
+      transform: translateY(-10px) scale(1.04);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    }
+
+    /* Image Styling */
+    #html .card-img-top {
+      height: 200px;                 /* bigger image space */
+      object-fit: contain;
+      padding: 15px;
+      background: linear-gradient(135deg, #fafafa, #f3f3f3);
+      transition: transform 0.4s ease;
+    }
+
+    #html .card:hover .card-img-top {
+      transform: scale(1.1);
+    }
+
+    /* Title Styling */
+    #html .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ff6600;
+      margin-top: 10px;
+      transition: color 0.3s ease;
+    }
+
+    #html .card:hover .card-title {
+      color: #ff3366;
+    }
+
+    /* Lightbox overlay */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+
+    .lightbox.show {
+      display: flex;
+    }
+
+    /* Zoomed image */
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 14px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+      animation: zoomIn 0.4s ease;
+    }
+
+    /* Close button */
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 45px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+
+    .lightbox .close:hover {
+      transform: scale(1.2);
+      color: #ff6600;
+    }
+
+    /* Animation */
+    @keyframes zoomIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HTML Section -->
+  <section id="html" class="container my-4">
+    <h2 class="section-title">HTML</h2>
+    <div id="gallery" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+
+
+ <!-- Add the rest of your certifications here -->
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/olul.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Lists</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/hgthwdthimg.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Right Left Image</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/imagetransperacy.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Image Transparency</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/reg2.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Registration</h6>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/regform.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Registration Form</h6>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/responsivetable.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Responsive Table</h6>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/border.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Border Style</h6>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/boxmodel.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Box Model</h6>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/dsngn.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Design</h6>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/fawicon.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Fawicon</h6>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/success.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Page</h6>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/table.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Merging Rows</h6>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/tablecol.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Merging Cols</h6>
+        </div>
+      </div>
+    </div>
+
+    
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/textdec.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Text Decoration</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/texttransp.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Text Transparent</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/tooltip.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">ToolTip</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/transparency.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Transparent Box</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/water.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Pre Tag Page</h6>
+        </div>
+      </div>
+    </div>
+
+<div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/insertingbook.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Inserting Book</h6>
+        </div>
+      </div>
+    </div><div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/outline.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Outline Style</h6>
+        </div>
+      </div>
+    </div><div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/nav.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">navigation Bar</h6>
+        </div>
+      </div>
+    </div><div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/loginform.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Login Form</h6>
+        </div>
+      </div>
+    </div><div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/log2.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Login Form 2</h6>
+        </div>
+      </div>
+    </div><div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/link.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Link</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/letterspacing.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">Letter spacing</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 text-center">
+        <img src="images/june.jpeg" class="card-img-top" alt="Certification 1">
+        <div class="card-body">
+          <h6 class="card-title">June Page</h6>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <img id="lightbox-img" src="" alt="Expanded view">
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('#gallery .card img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('closeBtn');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        lightbox.classList.add('show');
+        lightboxImg.src = card.src;
+        lightboxImg.alt = card.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.classList.remove('show');
+      }
+    });
+  </script>
+
+</body>
+</html>
