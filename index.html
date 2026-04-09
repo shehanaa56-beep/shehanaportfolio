@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,19 +12,25 @@
     * {
       scroll-behavior: smooth;
     }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9f9f9;
       color: #333;
       line-height: 1.6;
     }
-    h1, h2, h3 {
-      font-weight: 700;
+
+    h1,
+    h2,
+    h3 {
+      n font-weight: 700;
       color: #222;
     }
+
     section {
       padding: 70px 0;
     }
+
     .section-title {
       text-align: center;
       margin-bottom: 40px;
@@ -33,6 +40,7 @@
       letter-spacing: 1px;
       position: relative;
     }
+
     .section-title::after {
       content: "";
       width: 60px;
@@ -48,39 +56,46 @@
       background-color: #222;
       padding: 1rem 0;
     }
+
     .navbar-brand {
       font-weight: bold;
       color: #ff6600 !important;
       font-size: 1.4rem;
       letter-spacing: 1px;
     }
+
     .navbar a {
       color: #fff !important;
       transition: color 0.3s;
     }
+
     .navbar a:hover {
       color: #ffcc00 !important;
     }
+
     .navbar-toggler {
       border: none;
     }
+
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
 
     /* ===== Intro Section ===== */
     #intro {
-      background: linear-gradient(135deg, rgba(255,102,0,0.9), rgba(255,51,102,0.9)),
-                  url('images/bg.jpg') center/cover no-repeat;
+      background: linear-gradient(135deg, rgba(255, 102, 0, 0.9), rgba(255, 51, 102, 0.9)),
+        url('images/bg.jpg') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 120px 20px;
       position: relative;
     }
+
     #intro h1 {
       font-size: 3.2rem;
       animation: fadeInDown 1.2s ease;
     }
+
     #intro p {
       font-size: 1.2rem;
       max-width: 600px;
@@ -88,14 +103,147 @@
       animation: fadeInUp 1.5s ease;
     }
 
+    /* ===== Brand Showcase ===== */
+    #brand-showcase {
+      background:
+        radial-gradient(circle at top left, rgba(255, 102, 0, 0.10), transparent 35%),
+        radial-gradient(circle at right center, rgba(102, 51, 255, 0.12), transparent 30%),
+        linear-gradient(135deg, #ffffff, #f4f7ff);
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0.8rem 1.4rem;
+      border: 1px solid rgba(102, 51, 255, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+      color: #5b56d6;
+      font-weight: 600;
+    }
+
+    .brand-badge span {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff6600, #6633ff);
+      display: inline-block;
+    }
+
+    .brand-heading {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin: 20px 0 14px;
+      color: #18154d;
+      font-weight: 700;
+    }
+
+    .brand-heading .gradient-text {
+      background: linear-gradient(135deg, #ff6600, #6633ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .brand-copy {
+      font-size: 1.08rem;
+      color: #5f667a;
+      max-width: 620px;
+      margin: 0 auto 28px;
+      text-align: center;
+    }
+
+    .brand-showcase-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 44px;
+    }
+
+    .brand-card {
+      display: block;
+      background: #fff;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(26, 31, 78, 0.12);
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+    }
+
+    .brand-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 56px rgba(26, 31, 78, 0.18);
+    }
+
+    .brand-card-visual {
+      padding: 18px;
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .brand-card-visual::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 18px;
+      width: 50px;
+      height: 10px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.85) 35%, transparent 36%);
+      background-size: 16px 10px;
+      background-repeat: repeat-x;
+    }
+
+    .brand-card-visual img {
+      width: 100%;
+      max-width: 430px;
+      border-radius: 16px;
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+      object-fit: cover;
+    }
+
+    .brand-card-purple {
+      background: linear-gradient(135deg, #8b5cf6, #5b7cff);
+    }
+
+    .brand-card-pink {
+      background: linear-gradient(135deg, #ff4fa1, #ff7b54);
+    }
+
+    @media (max-width: 767.98px) {
+      .brand-card-visual {
+        min-height: 220px;
+      }
+    }
+
     /* Animations */
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-40px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ===== Project Cards ===== */
@@ -103,22 +251,26 @@
       border: none;
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     #projects .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
     }
+
     #projects .card-img-top {
       height: 200px;
       object-fit: cover;
     }
+
     #projects .card-title {
       font-size: 1.15rem;
       font-weight: 600;
       color: #ff6600;
     }
+
     #projects .btn {
       margin-top: 10px;
       border-radius: 20px;
@@ -128,6 +280,7 @@
       color: #ff6600;
       transition: all 0.3s ease;
     }
+
     #projects .btn:hover {
       background: #ff6600;
       color: #fff;
@@ -136,14 +289,15 @@
     /* ===== Works Section ===== */
     .work-img {
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s, box-shadow 0.3s;
       width: 100%;
       height: auto;
     }
+
     .work-img:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
     }
 
     /* ===== Skills ===== */
@@ -153,6 +307,7 @@
       justify-content: center;
       gap: 1rem;
     }
+
     .skills-list span {
       background: #ff6600;
       color: #fff;
@@ -163,10 +318,11 @@
       transition: all 0.3s ease;
       cursor: default;
     }
+
     .skills-list span:hover {
       background: #ff3366;
       transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     }
 
     /* ===== Footer ===== */
@@ -177,87 +333,109 @@
       padding: 30px 15px;
       margin-top: 50px;
     }
+
     footer .social-icons a {
       color: white;
       margin: 0 10px;
       font-size: 1.3rem;
       transition: color 0.3s, transform 0.3s;
     }
+
     footer .social-icons a:hover {
       color: #ff6600;
       transform: scale(1.2);
     }
+
     #certifications .card {
-  border: none;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#certifications .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-#certifications .card-img-top {
-  height: 150px;   /* ✅ smaller height */
-  object-fit: contain;  /* keeps full certificate visible */
-  background: #fdfdfd;
-  padding: 8px;    /* adds clean spacing */
-}
-#certifications .card-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #ff6600;
-}
-#certifications .card-text {
-  font-size: 0.8rem;
-  color: #666;
-}
-  /* Lightbox container */
-  .lightbox {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-  .lightbox.show {
-    display: flex;
-  }
+    #certifications .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
 
-  /* Zoomed image */
-  .lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #000;
-    animation: zoomIn 0.3s ease;
-  }
+    #certifications .card-img-top {
+      height: 150px;
+      /* ✅ smaller height */
+      object-fit: contain;
+      /* keeps full certificate visible */
+      background: #fdfdfd;
+      padding: 8px;
+      /* adds clean spacing */
+    }
 
-  /* Close button */
-  .lightbox .close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-  }
+    #certifications .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ff6600;
+    }
 
-  /* Zoom animation */
-  @keyframes zoomIn {
-    from { transform: scale(0.7); opacity: 0; }
-    to   { transform: scale(1); opacity: 1; }
-  }
-  .dropdown-menu{
-    background-color: #222;
-  }
+    #certifications .card-text {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    /* Lightbox container */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox.show {
+      display: flex;
+    }
+
+    /* Zoomed image */
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #000;
+      animation: zoomIn 0.3s ease;
+    }
+
+    /* Close button */
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Zoom animation */
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: #222;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -271,69 +449,72 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#intro">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#brand-showcase">Brand</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <!-- dropdown for works-->
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#work" id="worksDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Works
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="worksDropdown">
-            <li><a class="dropdown-item" href="html.html">HTML</a></li>
-            <li><a class="dropdown-item" href="javascript.html">JavaScript</a></li>
-            <li><a class="dropdown-item" href="react.html">React</a></li>
-            <li><a class="dropdown-item" href="mongodb.html">MongoDB</a></li>
-          </ul>
+            <a class="nav-link dropdown-toggle" href="#work" id="worksDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Works
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="worksDropdown">
+              <li><a class="dropdown-item" href="html.html">HTML</a></li>
+              <li><a class="dropdown-item" href="javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="react.html">React</a></li>
+              <li><a class="dropdown-item" href="mongodb.html">MongoDB</a></li>
+            </ul>
+        </ul>
         </li>
-      </ul>
+        </ul>
       </div>
     </div>
   </nav>
 
-  
+
 
   <!-- Intro -->
   <section id="intro">
     <h1>Hi, I'm Shehana 👋</h1>
-    <p>A passionate web developer specialized in HTML, CSS, JavaScript, React, Node.js,Express and MongoDB.</p>
+    <p>A passionate web developer specialized in HTML, CSS, JavaScript, React, Node.js, and MongoDB.</p>
   </section>
 
-<!-- About -->
-<section id="about" class="container">
-  <h2 class="section-title">About Me</h2>
-  
-  <p>
-  I am a passionate <strong>full-stack web developer</strong> with a keen interest in creating
-  clean, responsive, and user-friendly web applications. I enjoy transforming creative ideas
-  into fully functional digital experiences using modern web technologies like
-  <strong>HTML, CSS, JavaScript, React, Node.js, and MongoDB</strong>.
-</p>
+  <!-- About -->
+  <section id="about" class="container">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I am a passionate <strong>full-stack web developer</strong> with a keen interest in creating
+      clean, responsive, and user-friendly web applications. I enjoy transforming creative ideas
+      into fully functional digital experiences using modern web technologies like
+      <strong>HTML, CSS, JavaScript, React, Node.js, and MongoDB</strong>.
+    </p>
 
-<p>
-  My journey in web development started with a curiosity to design interactive
-  pages, and over time, I’ve built projects ranging from simple landing pages
-  to <strong>complete full-stack applications</strong> with secure backends, APIs,
-  and dynamic databases. I strongly believe in writing clean,
-  reusable code and continuously improving my skills to keep up with
-  industry standards.
-</p>
-  
-  <p>
-  Apart from coding, I love exploring new design trends, contributing to
-  open-source projects, and learning tools that make development faster and
-  more efficient. My goal is to build digital products that not only
-  <em>look good</em> but also <em>solve real problems</em> for people.
-</p>
+    <p>
+      My journey in web development started with a curiosity to design interactive
+      pages, and over time, I’ve built projects ranging from simple landing pages
+      to <strong>complete full-stack applications</strong> with secure backends, APIs,
+      and dynamic databases. I strongly believe in writing clean,
+      reusable code and continuously improving my skills to keep up with
+      industry standards.
+    </p>
 
-<p>
-  When I’m not coding, you’ll find me reading tech blogs, experimenting with
-  new technologies, or working on personal creative projects that challenge my
-  skills and help me grow as a developer.
-</p>
+    <p>
+      Apart from coding, I love exploring new design trends, contributing to
+      open-source projects, and learning tools that make development faster and
+      more efficient. My goal is to build digital products that not only
+      <em>look good</em> but also <em>solve real problems</em> for people.
+    </p>
 
-</section>
-<!-- Brand / Freelance Showcase -->
+    <p>
+      When I’m not coding, you’ll find me reading tech blogs, experimenting with
+      new technologies, or working on personal creative projects that challenge my
+      skills and help me grow as a developer.
+    </p>
+
+  </section>
+
+  <!-- Brand / Freelance Showcase -->
   <section id="brand-showcase">
     <div class="container">
       <div class="brand-showcase-header">
@@ -362,460 +543,495 @@
     </div>
   </section>
 
-<!-- Projects -->
-<section id="projects" class="container">
-  <h2 class="section-title">Projects</h2>
-  <div class="row g-4">
+  <!-- Projects -->
+  <section id="projects" class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="row g-4">
 
-    <!-- Project 1 -->
-    <div class="col-md-3 col-sm-6">
-      <div class="card h-100 d-flex flex-column">
-        <img src="images/myggg.JPG" class="card-img-top" alt="Project 1">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">myG Website</h5>
-          <p class="card-text"> A responsive e-commerce style website built using <strong>HTML</strong>, 
-          <strong>CSS</strong>, and <strong>JavaScript</strong>. The site features 
-          product listings, category filters, interactive UI elements, and a 
-          modern card-based design. Focused on providing a smooth user experience 
-          across devices without using external frameworks.</p>
-          <a href="https://shehanaa56-beep.github.io/mygg/" class="btn mt-auto">View Project</a>
+      <!-- Project 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/myggg.JPG" class="card-img-top" alt="Project 1">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">myG Website</h5>
+            <p class="card-text"> A responsive e-commerce style website built using <strong>HTML</strong>,
+              <strong>CSS</strong>, and <strong>JavaScript</strong>. The site features
+              product listings, category filters, interactive UI elements, and a
+              modern card-based design. Focused on providing a smooth user experience
+              across devices without using external frameworks.
+            </p>
+            <a href="https://shehanaa56-beep.github.io/mygg/" class="btn mt-auto">View Project</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Project 2 -->
-    <div class="col-md-3 col-sm-6">
-      <div class="card h-100 d-flex flex-column">
-        <img src="images/helu.JPG" class="card-img-top" alt="Project 2">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Heluna</h5>
-          <p class="card-text">An interactive <strong>AI-powered chatbot</strong> website inspired by Gemini. 
-          Heluna can answer user queries, provide helpful suggestions, 
-          and engage in natural conversations. Designed with a clean UI 
-          for smooth interaction and responsive across all devices.</p>
-          <a href="https://shehanaa56-beep.github.io/Heluna/" class="btn mt-auto">View Project</a>
+      <!-- Project 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/helu.JPG" class="card-img-top" alt="Project 2">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Heluna</h5>
+            <p class="card-text">An interactive <strong>AI-powered chatbot</strong> website inspired by Gemini.
+              Heluna can answer user queries, provide helpful suggestions,
+              and engage in natural conversations. Designed with a clean UI
+              for smooth interaction and responsive across all devices.</p>
+            <a href="https://shehanaa56-beep.github.io/Heluna/" class="btn mt-auto">View Project</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Project 3 -->
-    <div class="col-md-3 col-sm-6">
-      <div class="card h-100 d-flex flex-column">
-        <img src="images/portfo.JPG" class="card-img-top" alt="Project 3">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Legend Portfolio</h5>
-          <p class="card-text">A dedicated portfolio website built with <strong>HTML</strong>, <strong>CSS</strong>, 
-          <strong>JavaScript</strong>, and <strong>Bootstrap</strong>. It showcases Mammootty’s 
-          film journey, major works, achievements, and awards in a structured and visually 
-          appealing layout. Fully responsive with smooth navigation and modern design elements.</p>
-          <a href=" https://shehanaa56-beep.github.io/mamooty/" class="btn mt-auto">View Project</a>
+      <!-- Project 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/portfo.JPG" class="card-img-top" alt="Project 3">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Legend Portfolio</h5>
+            <p class="card-text">A dedicated portfolio website built with <strong>HTML</strong>, <strong>CSS</strong>,
+              <strong>JavaScript</strong>, and <strong>Bootstrap</strong>. It showcases Mammootty’s
+              film journey, major works, achievements, and awards in a structured and visually
+              appealing layout. Fully responsive with smooth navigation and modern design elements.
+            </p>
+            <a href=" https://shehanaa56-beep.github.io/mamooty/" class="btn mt-auto">View Project</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Project 4 -->
-    <div class="col-md-3 col-sm-6">
-      <div class="card h-100 d-flex flex-column">
-        <img src="images/sinet.JPG" class="card-img-top" alt="Project 4">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">SINET Website</h5>
-          <p class="card-text">
-         A responsive job training and educational platform built using 
-         <strong>React</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. 
-         The app features dynamic course listings, institute details, location maps, and 
-         contact integration with WhatsApp and email. Designed with reusable components 
-         and a modern UI, ensuring a seamless experience across devices.
-         </p>
-          <a href="https://sinet.vercel.app/" class="btn mt-auto">View Project</a>
+      <!-- Project 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/sinet.JPG" class="card-img-top" alt="Project 4">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">SINET Website</h5>
+            <p class="card-text">
+              A responsive job training and educational platform built using
+              <strong>React</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.
+              The app features dynamic course listings, institute details, location maps, and
+              contact integration with WhatsApp and email. Designed with reusable components
+              and a modern UI, ensuring a seamless experience across devices.
+            </p>
+            <a href="https://sinet.vercel.app/" class="btn mt-auto">View Project</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Project 5 -->
-<div class="col-md-3 col-sm-6">
-  <div class="card h-100 d-flex flex-column">
-    <img src="images/milky.JPG" class="card-img-top" alt="Project 5">
-    <div class="card-body d-flex flex-column">
-      <h5 class="card-title">MilkyMist Website</h5>
-      <p class="card-text">
-        A responsive product showcase platform built using 
-        <strong>React</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. 
-        The site highlights newly launched MilkyMist ice cream products with 
-        interactive banners, smooth navigation, and a <strong>Buy Now</strong> feature. 
-        Designed with reusable React components and a clean UI, ensuring an engaging 
-        shopping experience across devices.
-      </p>
-      <a href="https://milkymistt-us7a.vercel.app/" class="btn mt-auto">View Project</a>
-    </div>
-  </div>
-</div>
+      <!-- Project 5 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/milky.JPG" class="card-img-top" alt="Project 5">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">MilkyMist Website</h5>
+            <p class="card-text">
+              A responsive product showcase platform built using
+              <strong>React</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.
+              The site highlights newly launched MilkyMist ice cream products with
+              interactive banners, smooth navigation, and a <strong>Buy Now</strong> feature.
+              Designed with reusable React components and a clean UI, ensuring an engaging
+              shopping experience across devices.
+            </p>
+            <a href="https://milkymistt-us7a.vercel.app/" class="btn mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
 
-<!-- Project 6 -->
-<div class="col-md-3 col-sm-6">
-  <div class="card h-100 d-flex flex-column">
-    <img src="images/tim.JPG" class="card-img-top" alt="Project 5">
-    <div class="card-body d-flex flex-column">
-      <h5 class="card-title">TimeLessTick</h5>
-   <p class="card-text">
-  A modern watch store web app built using 
-  <strong>React.js</strong> and <strong>Firebase</strong>. 
-  The platform includes product filtering, categories, and an 
-  <strong>Admin Panel</strong> for easy product management. 
-  Integrated with Firebase Realtime Database and Storage for 
-  seamless data handling, and designed with a responsive, 
-  clean UI for an engaging shopping experience across devices.
-</p>
-      <a href="https://timelesstick.vercel.app" class="btn mt-auto">View Project</a>
-    </div>
-  </div>
-</div>
+      <!-- Project 6 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/tim.JPG" class="card-img-top" alt="Project 5">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">TimeLessTick</h5>
+            <p class="card-text">
+              A modern watch store web app built using
+              <strong>React.js</strong> and <strong>Firebase</strong>.
+              The platform includes product filtering, categories, and an
+              <strong>Admin Panel</strong> for easy product management.
+              Integrated with Firebase Realtime Database and Storage for
+              seamless data handling, and designed with a responsive,
+              clean UI for an engaging shopping experience across devices.
+            </p>
+            <a href="https://timelesstick.vercel.app" class="btn mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
 
-<!-- Project 7 -->
-<div class="col-md-3 col-sm-6">
-  <div class="card h-100 d-flex flex-column">
-    <img src="images/ddr.JPG" class="card-img-top" alt="Project 5">
-    <div class="card-body d-flex flex-column">
+      <!-- Project 7 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/ddr.JPG" class="card-img-top" alt="Project 5">
+          <div class="card-body d-flex flex-column">
 
-<h5 class="card-title">Dr. Alex Morgan Website</h5>
-<p class="card-text">
-  A modern, responsive medical portfolio website built using 
-  <strong>React</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>Firebase</strong>. 
-  The platform showcases Dr. Alex Morgan’s medical services, case studies, and patient-focused care. 
-  Features include a clean professional layout, smooth navigation, and a 
-  <strong>Request Appointment</strong> system powered by Firebase for secure data handling and easy scheduling. 
-  Designed with an emphasis on accessibility, trust, and compassionate healthcare presentation.
-</p>
-      <a href="https://doctorportt.vercel.app" class="btn mt-auto">View Project</a>
-    </div>
-  </div>
-</div>
+            <h5 class="card-title">Dr. Alex Morgan Website</h5>
+            <p class="card-text">
+              A modern, responsive medical portfolio website built using
+              <strong>React</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>Firebase</strong>.
+              The platform showcases Dr. Alex Morgan’s medical services, case studies, and patient-focused care.
+              Features include a clean professional layout, smooth navigation, and a
+              <strong>Request Appointment</strong> system powered by Firebase for secure data handling and easy
+              scheduling.
+              Designed with an emphasis on accessibility, trust, and compassionate healthcare presentation.
+            </p>
+            <a href="https://doctorportt.vercel.app" class="btn mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
 
-<!-- Project 8 -->
-<div class="col-md-3 col-sm-6">
-  <div class="card h-100 d-flex flex-column">
-    <img src="images/memo.JPG" class="card-img-top" alt="Project 5">
-    <div class="card-body d-flex flex-column">
+      <!-- Project 8 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/memo.JPG" class="card-img-top" alt="Project 5">
+          <div class="card-body d-flex flex-column">
 
-<h5 class="card-title">Memoroids by Shehana</h5>
-<p class="card-text">
-  A creative e-commerce platform built with 
-  <strong>React</strong>, <strong>CSS</strong>, and <strong>Node.js</strong>. 
-  It showcases handcrafted Polaroids, albums, and personalized frames with a warm, aesthetic design. 
-  Features include a seamless shopping experience, interactive gallery, and smooth navigation — 
-  capturing memories beautifully in every click.
-</p>
+            <h5 class="card-title">Memoroids by Shehana</h5>
+            <p class="card-text">
+              A creative e-commerce platform built with
+              <strong>React</strong>, <strong>CSS</strong>, and <strong>Node.js</strong>.
+              It showcases handcrafted Polaroids, albums, and personalized frames with a warm, aesthetic design.
+              Features include a seamless shopping experience, interactive gallery, and smooth navigation —
+              capturing memories beautifully in every click.
+            </p>
 
-      <a href="https://memoroids-e96r.vercel.app" class="btn mt-auto">View Project</a>
-    </div>
-  </div>
-</div>
+            <a href="https://memoroids-e96r.vercel.app" class="btn mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
 
-    <!-- Project 9 -->
-<div class="col-md-3 col-sm-6">
-  <div class="card h-100 d-flex flex-column">
-    <img src="images/jew.JPG" class="card-img-top" alt="Project 5">
-    <div class="card-body d-flex flex-column">
+      <!-- Project 9 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/jew.JPG" class="card-img-top" alt="Project 5">
+          <div class="card-body d-flex flex-column">
 
-<h5 class="card-title">Elegant Timepieces</h5>
-<p class="card-text">
-  A sophisticated <strong>e-commerce website</strong> built with <strong>React.js</strong>, <strong>CSS</strong>, and <strong>Node.js</strong>. 
-  It showcases an exclusive collection of <strong>watches</strong>, <strong>jewellery</strong>, and <strong>accessories</strong> 
-  with a luxurious, modern interface. Featuring smooth navigation, category-based filtering, and a polished user experience — 
-  this project brings timeless elegance to online shopping.
-</p>
+            <h5 class="card-title">Elegant Timepieces</h5>
+            <p class="card-text">
+              A sophisticated <strong>e-commerce website</strong> built with <strong>React.js</strong>,
+              <strong>CSS</strong>, and <strong>Node.js</strong>.
+              It showcases an exclusive collection of <strong>watches</strong>, <strong>jewellery</strong>, and
+              <strong>accessories</strong>
+              with a luxurious, modern interface. Featuring smooth navigation, category-based filtering, and a polished
+              user experience —
+              this project brings timeless elegance to online shopping.
+            </p>
+            <a href="https://jewellery-blush.vercel.app" class="btn mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
 
+      <!-- Project 10 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/sf.JPG" class="card-img-top" alt="Project 5">
+          <div class="card-body d-flex flex-column">
 
-      <a href="https://jewellery-blush.vercel.app" class="btn mt-auto">View Project</a>
-    </div>
-  </div>
-</div>
-<!-- Project 10 -->
-<div class="col-md-3 col-sm-6">
-  <div class="card h-100 d-flex flex-column">
-    <img src="images/sf.JPG" class="card-img-top" alt="Project 5">
-    <div class="card-body d-flex flex-column">
+            <h5 class="card-title">SFI Blood Donors</h5>
+            <p class="card-text">
+              A community-driven <strong>blood donation web platform</strong> built using
+              <strong>React.js</strong>, <strong>Firebase</strong>, and <strong>CSS</strong>.
+              It enables users to <strong>register as donors</strong>, <strong>search by blood group or
+                location</strong>,
+              and <strong>connect with volunteers instantly</strong>. The interface follows a clean red-and-white theme,
+              symbolizing <strong>life and compassion</strong>, with a fully <strong>responsive design</strong> for
+              smooth access across devices.
+              This project reflects my focus on <strong>UI/UX design</strong> and <strong>social impact web
+                development</strong>.
+            </p>
+            <a href="https://sfiperinthalmanna.vercel.app" class="btn mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
 
-<h5 class="card-title">SFI Blood Donors</h5>
-<p class="card-text">
-  A community-driven <strong>blood donation web platform</strong> built using 
-  <strong>React.js</strong>, <strong>Firebase</strong>, and <strong>CSS</strong>. 
-  It enables users to <strong>register as donors</strong>, <strong>search by blood group or location</strong>, 
-  and <strong>connect with volunteers instantly</strong>. The interface follows a clean red-and-white theme, 
-  symbolizing <strong>life and compassion</strong>, with a fully <strong>responsive design</strong> for smooth access across devices. 
-  This project reflects my focus on <strong>UI/UX design</strong> and <strong>social impact web development</strong>.
-</p>
-      <a href="https://sfiperinthalmanna.vercel.app" class="btn mt-auto">View Project</a>
-    </div>
-  </div>
-</div>
+      <!-- Project 11 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/jew.JPG" class="card-img-top" alt="Project 5">
+          <div class="card-body d-flex flex-column">
 
-  </div>
-</section>
-
-<section id="projects" class="container">
-  <h2 class="section-title">Mini Projects</h2>
-   <div class="row g-4">
-
-    <!-- Mini Project1-->
-    <div class="col-md-3 col-sm-6">
-  <div class="card h-100 d-flex flex-column">
-    <img src="images/todo.jpg" class="card-img-top" alt="Project 5">
-    <div class="card-body d-flex flex-column">
-
-<h5 class="card-title">Task Manager App</h5>
-<p class="card-text">
-  A modern and efficient <strong>Task Manager</strong> application built using 
-  <strong>React.js</strong> and <strong>Firebase</strong>. It allows users to add, update, 
-  and delete tasks in real-time, with data securely stored in the cloud. 
-  Designed with a clean interface to help users stay productive and organized effortlessly.
-</p>
-<a href="https://mytodo-delta-two.vercel.app" class="btn mt-auto">View Project</a>
-
-    </div>
-  </div>
-</div>
-
-    <div class="col-md-3 col-sm-6">
-  <div class="card h-100 d-flex flex-column">
-    <img src="images/em.JPG" class="card-img-top" alt="Project 5">
-    <div class="card-body d-flex flex-column">
-
-<h5 class="card-title">Employee Management System</h5>
-<p class="card-text">
-  A fully functional <strong>Employee Management</strong> web application built using 
-  <strong>React.js</strong> and <strong>Firebase</strong>. It allows users to add, edit, delete, 
-  and search employee details efficiently. The system stores data in real-time and 
-  provides a clean, responsive interface for managing employee records — including 
-  name, department, and salary details.
-</p>
-<a href="https://your-employeemanagement-link.com" class="btn mt-auto">View Project</a>
+            <h5 class="card-title">FreshStart</h5>
+            <p class="card-text">
+              A sophisticated <strong>e-commerce website</strong> built with <strong>React.js</strong>,
+              <strong>CSS</strong>, and <strong>Node.js</strong>.
+              It showcases an exclusive collection of <strong>watches</strong>, <strong>jewellery</strong>, and
+              <strong>accessories</strong>
+              with a luxurious, modern interface. Featuring smooth navigation, category-based filtering, and a polished
+              user experience —
+              this project brings timeless elegance to online shopping.
+            </p>
+            <a href="https://freshstart-nine.vercel.app" class="btn mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
 
     </div>
-  </div>
-</div>
+  </section>
+
+  <section id="projects" class="container">
+    <h2 class="section-title">Mini Projects</h2>
+    <div class="row g-4">
+
+      <!-- Mini Project1-->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/todo.jpg" class="card-img-top" alt="Project 5">
+          <div class="card-body d-flex flex-column">
+
+            <h5 class="card-title">Task Manager App</h5>
+            <p class="card-text">
+              A modern and efficient <strong>Task Manager</strong> application built using
+              <strong>React.js</strong> and <strong>Firebase</strong>. It allows users to add, update,
+              and delete tasks in real-time, with data securely stored in the cloud.
+              Designed with a clean interface to help users stay productive and organized effortlessly.
+            </p>
+            <a href="https://mytodo-delta-two.vercel.app" class="btn mt-auto">View Project</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/em.jpg" class="card-img-top" alt="Project 5">
+          <div class="card-body d-flex flex-column">
+
+            <h5 class="card-title">Employee Management System</h5>
+            <p class="card-text">
+              A fully functional <strong>Employee Management</strong> web application built using
+              <strong>React.js</strong> and <strong>Firebase</strong>. It allows users to add, edit, delete,
+              and search employee details efficiently. The system stores data in real-time and
+              provides a clean, responsive interface for managing employee records — including
+              name, department, and salary details.
+            </p>
+            <a href="https://your-employeemanagement-link.com" class="btn mt-auto">View Project</a>
+
+          </div>
+        </div>
+      </div>
 
 
- <div class="col-md-3 col-sm-6">
-  <div class="card h-100 d-flex flex-column">
-    <img src="images/hos.JPG" class="card-img-top" alt="Project 5">
-    <div class="card-body d-flex flex-column">
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 d-flex flex-column">
+          <img src="images/hos.jpg" class="card-img-top" alt="Project 5">
+          <div class="card-body d-flex flex-column">
 
-<h5 class="card-title">Hospital Management System</h5>
-<p class="card-text">
-  A comprehensive <strong>Hospital Management System</strong> built using 
-  <strong>React.js</strong>, <strong>Node.js</strong>, and <strong>Firebase</strong>. 
-  It includes role-based access for <strong>Admin</strong>, <strong>Doctor</strong>, and <strong>Patient</strong> users. 
-  The system manages appointments, patient records, doctor details, billing, and medicine inventory 
-  — all within a secure and user-friendly interface. Designed to streamline hospital operations 
-  and enhance patient care.
-</p>
-<a href="https://your-hospitalmanagement-link.com" class="btn mt-auto">View Project</a>
+            <h5 class="card-title">Hospital Management System</h5>
+            <p class="card-text">
+              A comprehensive <strong>Hospital Management System</strong> built using
+              <strong>React.js</strong>, <strong>Node.js</strong>, and <strong>Firebase</strong>.
+              It includes role-based access for <strong>Admin</strong>, <strong>Doctor</strong>, and
+              <strong>Patient</strong> users.
+              The system manages appointments, patient records, doctor details, billing, and medicine inventory
+              — all within a secure and user-friendly interface. Designed to streamline hospital operations
+              and enhance patient care.
+            </p>
+            <a href="https://your-hospitalmanagement-link.com" class="btn mt-auto">View Project</a>
+
+          </div>
+        </div>
+      </div>
+
 
     </div>
-  </div>
-</div>
-
-
-  </div>
-</section>
-  
+  </section>
   <!-- Works -->
+
+
   <!-- Certifications -->
-<section id="certifications" class="container">
-  <h2 class="section-title">Certifications</h2>
-  <div id="gallery" class="row row-cols-2 row-cols-md-4 g-4">
+  <section id="certifications" class="container">
+    <h2 class="section-title">Certifications</h2>
+    <div id="gallery" class="row row-cols-2 row-cols-md-4 g-4">
 
-     <!-- Certification-->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/certificate.JPG" class="card-img-top" alt="Certification 1">
-        <div class="card-body">
-          <h6 class="card-title">MERN Stack Developer</h6>
-          <p class="card-text small">Sinet Education</p>
+      <!-- Certification-->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/certificate.JPG" class="card-img-top" alt="Certification 1">
+          <div class="card-body">
+            <h6 class="card-title">MERN Stack Developer</h6>
+            <p class="card-text small">Sinet Education</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Certification 1 -->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/Magic lamps.jpeg" class="card-img-top" alt="Certification 1">
-        <div class="card-body">
-          <h6 class="card-title">Retail Intern</h6>
-          <p class="card-text small">Magic Lamps Intervel</p>
+      <!-- Certification 1 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/Magic lamps.jpeg" class="card-img-top" alt="Certification 1">
+          <div class="card-body">
+            <h6 class="card-title">Retail Intern</h6>
+            <p class="card-text small">Magic Lamps</p>
+          </div>
         </div>
       </div>
+
+
+      <!-- Certification 2 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/postmancertificate.JPG" class="card-img-top" alt="Postman Certificate">
+          <div class="card-body">
+            <h6 class="card-title">Postman API Fundamentals Student Expert</h6>
+            <p class="card-text small">Issued by Postman</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Certification 3 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/mongodb.jpeg" class="card-img-top" alt="Certification 2">
+          <div class="card-body">
+            <h6 class="card-title">MongoDB Bootcamp</h6>
+            <p class="card-text small">Lets upgrade</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certification 4 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/personalportfolio.jpeg" class="card-img-top" alt="Certification 3">
+          <div class="card-body">
+            <h6 class="card-title">Build a Personal Portfolio with Bootstrap 5</h6>
+            <p class="card-text small">Lets Upgrade</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certification 5 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/neelit.jpeg" class="card-img-top" alt="Certification 3">
+          <div class="card-body">
+            <h6 class="card-title">NIELIT</h6>
+            <p class="card-text small">cyberShikshaa Fundamentals</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certification 6 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/pythonn.jpeg" class="card-img-top" alt="Certification 4">
+          <div class="card-body">
+            <h6 class="card-title">Zero to python Hero:Code Smart with AI</h6>
+            <p class="card-text small">Lets Upgrade</p>
+          </div>
+        </div>
+      </div>
+      <!-- Certification 5 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/figma.JPG" class="card-img-top" alt="Certification 4">
+          <div class="card-body">
+            <h6 class="card-title">Figma Bootcamp</h6>
+            <p class="card-text small">Lets Upgrade</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more by copy-pasting -->
+      <!-- Certification 1 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/python.jpeg" class="card-img-top" alt="Certification 1">
+          <div class="card-body">
+            <h6 class="card-title">Python Bootcamp</h6>
+            <p class="card-text small">Lets Upgrade</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/istudio.jpeg" class="card-img-top" alt="Certification 1">
+          <div class="card-body">
+            <h6 class="card-title">ICAT</h6>
+            <p class="card-text small">iStudio</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certification 2 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/gemini.jpeg" class="card-img-top" alt="Certification 2">
+          <div class="card-body">
+            <h6 class="card-title">Gemini AI Clone using HTML CSS & JavaScript</h6>
+            <p class="card-text small">Lets Upgrade</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certification 3 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/excel.jpeg" class="card-img-top" alt="Certification 3">
+          <div class="card-body">
+            <h6 class="card-title">Excel Bootcamp</h6>
+            <p class="card-text small">Lets Upgrade</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certification 4 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/data analytics.jpeg" class="card-img-top" alt="Certification 4">
+          <div class="card-body">
+            <h6 class="card-title">Advanced Data Analysis using Excel and PowerBI</h6>
+            <p class="card-text small">Lets Upgrade</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certification 5 -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="images/github.jpeg" class="card-img-top" alt="Certification 4">
+          <div class="card-body">
+            <h6 class="card-title">Git & GitHub Bootcamp</h6>
+            <p class="card-text small">Lets Upgrade</p>
+          </div>
+        </div>
+      </div>
+
     </div>
-       <!-- Certification 2 -->
-<div class="col">
-  <div class="card h-100 text-center">
-    <img src="images/postmancertificate.JPG" class="card-img-top" alt="Postman Certificate">
-    <div class="card-body">
-      <h6 class="card-title">Postman API Fundamentals Student Expert</h6>
-      <p class="card-text small">Issued by Postman</p>
+
     </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img src="" alt="Zoomed Certificate" id="lightbox-img">
   </div>
-</div>
+  <script>
+    const gallery = document.getElementById("gallery");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".lightbox .close");
 
-    <!-- Certification 3 -->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/mongodb.jpeg" class="card-img-top" alt="Certification 2">
-        <div class="card-body">
-          <h6 class="card-title">MongoDB Bootcamp</h6>
-          <p class="card-text small">Lets upgrade</p>
-        </div>
-      </div>
-    </div>
+    // Open lightbox on image click
+    gallery.addEventListener("click", function (e) {
+      if (e.target.tagName === "IMG") {
+        lightboxImg.src = e.target.src;
+        lightbox.classList.add("show");
+      }
+    });
 
-    <!-- Certification 4 -->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/personalportfolio.jpeg" class="card-img-top" alt="Certification 3">
-        <div class="card-body">
-          <h6 class="card-title">Build a Personal Portfolio with Bootstrap 5</h6>
-          <p class="card-text small">Lets Upgrade</p>
-        </div>
-      </div>
-    </div>
-
-     <!-- Certification 5 -->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/neelit.jpeg" class="card-img-top" alt="Certification 3">
-        <div class="card-body">
-          <h6 class="card-title">NIELIT</h6>
-          <p class="card-text small">cyberShikshaa Fundamentals</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Certification 6 -->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/pythonn.jpeg" class="card-img-top" alt="Certification 4">
-        <div class="card-body">
-          <h6 class="card-title">Zero to python Hero:Code Smart with AI</h6>
-          <p class="card-text small">Lets Upgrade</p>
-        </div>
-      </div>
-    </div>
-  <!-- Certification 7 -->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/figma.JPG" class="card-img-top" alt="Certification 4">
-        <div class="card-body">
-          <h6 class="card-title">Figma Bootcamp</h6>
-          <p class="card-text small">Lets Upgrade</p>
-        </div>
-      </div>
-    </div>
-    <!-- Add more by copy-pasting -->
-<!-- Certification 1 -->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/python.jpeg" class="card-img-top" alt="Certification 1">
-        <div class="card-body">
-          <h6 class="card-title">Python Bootcamp</h6>
-          <p class="card-text small">Lets Upgrade</p>
-        </div>
-      </div>
-    </div>
-
-     <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/istudio.jpeg" class="card-img-top" alt="Certification 1">
-        <div class="card-body">
-          <h6 class="card-title">ICAT</h6>
-          <p class="card-text small">iStudio</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Certification 2 -->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/gemini.jpeg" class="card-img-top" alt="Certification 2">
-        <div class="card-body">
-          <h6 class="card-title">Gemini AI Clone using HTML CSS & JavaScript</h6>
-          <p class="card-text small">Lets Upgrade</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Certification 3 -->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/excel.jpeg" class="card-img-top" alt="Certification 3">
-        <div class="card-body">
-          <h6 class="card-title">Excel Bootcamp</h6>
-          <p class="card-text small">Lets Upgrade</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Certification 4 -->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/data analytics.jpeg" class="card-img-top" alt="Certification 4">
-        <div class="card-body">
-          <h6 class="card-title">Advanced Data Analysis using Excel and PowerBI</h6>
-          <p class="card-text small">LMN Academy</p>
-        </div>
-      </div>
-    </div>
-
-     <!-- Certification 5 -->
-    <div class="col">
-      <div class="card h-100 text-center">
-        <img src="images/github.jpeg" class="card-img-top" alt="Certification 4">
-        <div class="card-body">
-          <h6 class="card-title">Git & GitHub Bootcamp</h6>
-          <p class="card-text small">Lets Upgrade</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  </div>
-</section>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <span class="close">&times;</span>
-  <img src="" alt="Zoomed Certificate" id="lightbox-img">
-</div>
-<script>
-  const gallery = document.getElementById("gallery");
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const closeBtn = document.querySelector(".lightbox .close");
-
-  // Open lightbox on image click
-  gallery.addEventListener("click", function(e) {
-    if (e.target.tagName === "IMG") {
-      lightboxImg.src = e.target.src;
-      lightbox.classList.add("show");
-    }
-  });
-
-  // Close when clicking X
-  closeBtn.addEventListener("click", () => {
-    lightbox.classList.remove("show");
-  });
-
-  // Close when clicking outside the image
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
+    // Close when clicking X
+    closeBtn.addEventListener("click", () => {
       lightbox.classList.remove("show");
-    }
-  });
-</script>
+    });
+
+    // Close when clicking outside the image
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove("show");
+      }
+    });
+  </script>
 
   <!-- Skills -->
 
-    <section id="skills">
+  <section id="skills">
     <div class="container">
       <h2 class="section-title">My skills</h2>
       <div class="row justify-content-center">
@@ -833,8 +1049,8 @@
         <div class="col-md-2">
           <img
             src="data:image/png;base64,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"
-          alt="Javascript" class="image fluid" width="70">
-          </div>
+            alt="Javascript" class="image fluid" width="70">
+        </div>
 
         <div class="col-md-2">
           <img
@@ -845,61 +1061,52 @@
         <div class="col-md-2">
           <img
             src="data:image/png;base64,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"
-             alt="React" class="img-fluid" width="70" />
+            alt="React" class="img-fluid" width="70" />
         </div>
 
         <div class="col-md-2">
           <img
             src="data:image/png;base64,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"
-             alt="React" class="img-fluid" width="70" />
+            alt="React" class="img-fluid" width="70" />
         </div>
-          <!-- <div class="skill-circle">bootstrap</div> -->
-        </div>
+
+
+        <!-- <div class="skill-circle">bootstrap</div> -->
+      </div>
 
   </section>
 
   <section id="skills">
     <div class="container">
-      
+
       <div class="row justify-content-center">
-       <div class="col-md-2">
-          <img
-            src="images/Postman - Postman API Fundamentals Student Expert - 2025-10-26 (1).png"
-             alt="React" class="img-fluid" width="70" />
+        <div class="col-md-2">
+          <img src="images/Postman - Postman API Fundamentals Student Expert - 2025-10-26 (1).png" alt="React"
+            class="img-fluid" width="70" />
         </div>
 
-            <div class="col-md-2">
-          <img
-            src="images/nodee.png"
-             alt="React" class="img-fluid" width="70" />
+        <div class="col-md-2">
+          <img src="images/nodee.png" alt="React" class="img-fluid" width="70" />
         </div>
 
-          <div class="col-md-2">
-          <img
-            src="images/exp.png"
-             alt="React" class="img-fluid" width="70" />
+        <div class="col-md-2">
+          <img src="images/exp.png" alt="React" class="img-fluid" width="70" />
         </div>
 
-         <div class="col-md-2">
-          <img
-            src="images/firebase.png"
-             alt="React" class="img-fluid" width="70" />
+        <div class="col-md-2">
+          <img src="images/firebase.png" alt="React" class="img-fluid" width="70" />
         </div>
 
-         <div class="col-md-2">
-          <img
-            src="images/git.png"
-             alt="React" class="img-fluid" width="70" />
+        <div class="col-md-2">
+          <img src="images/git.png" alt="React" class="img-fluid" width="70" />
         </div>
 
-         <div class="col-md-2">
-          <img
-            src="images/vercel.png"
-             alt="React" class="img-fluid" width="70" />
+        <div class="col-md-2">
+          <img src="images/vercel.png" alt="React" class="img-fluid" width="70" />
         </div>
 
-          <!-- <div class="skill-circle">bootstrap</div> -->
-        </div>
+        <!-- <div class="skill-circle">bootstrap</div> -->
+      </div>
 
   </section>
 
@@ -909,13 +1116,130 @@
     <p>© 2025 Shehana | All Rights Reserved</p>
     <div class="social-icons">
       <a href="https://github.com/shehanaa56-beep"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/shehana-a-1360a5362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/shehana-a-1360a5362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://wa.me/9037258541" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://instagram.com/__shehana____" target="_blank"><i class="fab fa-instagram"></i></a>
 
     </div>
   </footer>
 
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyC-gezoI34c7e1oPq0tD_UVoyHGxT_3DDY",
+      authDomain: "ecommerce-be353.firebaseapp.com",
+      databaseURL: "https://ecommerce-be353-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "ecommerce-be353",
+      storageBucket: "ecommerce-be353.firebasestorage.app",
+      messagingSenderId: "565831558769",
+      appId: "1:565831558769:web:7c1590397113656c2dddd0",
+      measurementId: "G-03J05N582Z"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    // Function to load data from Firestore
+    async function loadData() {
+      try {
+        // Load About section
+        const aboutSnapshot = await getDocs(collection(db, "about"));
+        aboutSnapshot.forEach((doc) => {
+          const data = doc.data();
+          document.querySelector('#about p').textContent = data.content;
+        });
+
+        // Load Projects
+        const projectsSnapshot = await getDocs(collection(db, "projects"));
+        const projectsContainer = document.querySelector('#projects .row');
+        projectsContainer.innerHTML = '';
+        projectsSnapshot.forEach((doc) => {
+          const data = doc.data();
+          const projectHTML = `
+            <div class="col-md-3 col-sm-6">
+              <div class="card h-100 d-flex flex-column">
+                <img src="${data.image}" class="card-img-top" alt="${data.title}">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">${data.title}</h5>
+                  <p class="card-text">${data.description}</p>
+                  <a href="${data.link}" class="btn mt-auto">View Project</a>
+                </div>
+              </div>
+            </div>
+          `;
+          projectsContainer.innerHTML += projectHTML;
+        });
+
+        // Load Certifications
+        const certsSnapshot = await getDocs(collection(db, "certifications"));
+        const certsContainer = document.querySelector('#certifications .row');
+        certsContainer.innerHTML = '';
+        certsSnapshot.forEach((doc) => {
+          const data = doc.data();
+          const certHTML = `
+            <div class="col">
+              <div class="card h-100 text-center">
+                <img src="${data.image}" class="card-img-top" alt="${data.title}">
+                <div class="card-body">
+                  <h6 class="card-title">${data.title}</h6>
+                  <p class="card-text small">${data.issuer}</p>
+                </div>
+              </div>
+            </div>
+          `;
+          certsContainer.innerHTML += certHTML;
+        });
+
+        // Load Skills
+        const skillsSnapshot = await getDocs(collection(db, "skills"));
+        const skillsContainer = document.querySelector('#skills .skills-list');
+        skillsContainer.innerHTML = '';
+        skillsSnapshot.forEach((doc) => {
+          const data = doc.data();
+          const skillHTML = `<span>${data.name}</span>`;
+          skillsContainer.innerHTML += skillHTML;
+        });
+
+        // Load Mini Projects
+        const miniProjectsSnapshot = await getDocs(collection(db, "miniProjects"));
+        const miniProjectsContainer = document.querySelector('#mini-projects .row');
+        miniProjectsContainer.innerHTML = '';
+        miniProjectsSnapshot.forEach((doc) => {
+          const data = doc.data();
+          const miniProjectHTML = `
+            <div class="col-md-3 col-sm-6">
+              <div class="card h-100 d-flex flex-column">
+                <img src="${data.image}" class="card-img-top" alt="${data.title}">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">${data.title}</h5>
+                  <p class="card-text">${data.description}</p>
+                  <a href="${data.link}" class="btn mt-auto">View Project</a>
+                </div>
+              </div>
+            </div>
+          `;
+          miniProjectsContainer.innerHTML += miniProjectHTML;
+        });
+
+      } catch (error) {
+        console.error("Error loading data from Firestore:", error);
+        // Fallback to static content if Firebase fails - content remains as is
+      }
+    }
+
+    // Load data when page loads
+    window.addEventListener('DOMContentLoaded', loadData);
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
